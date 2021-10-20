@@ -1,4 +1,4 @@
 #[no_mangle]
 pub extern "C" fn start() -> ! {
-    loop {}
+    panic!("test");
 }

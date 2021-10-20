@@ -1,11 +1,9 @@
 #![no_std]
-
 #![feature(llvm_asm)]
 #![feature(global_asm)]
 #![feature(panic_info_message)]
 
+extern crate arch;
 
-global_asm!(include_str!("asm/entry.S"));
-
-mod start;
 mod panic;
+mod start;
