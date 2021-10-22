@@ -1,5 +1,4 @@
 #![no_std]
-
 #![feature(llvm_asm)]
 #![feature(global_asm)]
 
@@ -8,6 +7,12 @@
 mod arch {
     mod boot;
     mod cpu;
+}
+
+#[cfg(target_arch = "x86")]
+#[path = "../x86"]
+mod arch {
+    mod boot;
 }
 
 pub use arch::*;

@@ -23,7 +23,7 @@ pub enum Color {
 #[repr(packed)]
 struct Char {
     pub char: u8,
-    attr: u8
+    attr: u8,
 }
 
 impl Char {
@@ -39,12 +39,6 @@ impl Char {
 pub const SCREEN_HEIGHT: usize = 25;
 pub const SCREEN_WIDTH: usize = 25;
 
-pub const SCREEN_SIZE: usize = SCREEN_WIDTH*SCREEN_HEIGHT;
+pub const SCREEN_SIZE: usize = SCREEN_WIDTH * SCREEN_HEIGHT;
 type Screen = [Char; SCREEN_SIZE];
 pub static SCREEN: *mut Screen = 0xb8000 as *mut Screen;
-
-pub fn clear_screen(bg: Color) {
-    unsafe {
-
-    }
-}

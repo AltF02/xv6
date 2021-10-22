@@ -1,8 +1,7 @@
 [build]
-linker = "/usr/bin/clang"
 target = "riscv64gc-unknown-none-elf"
 
 [target.riscv64gc-unknown-none-elf]
 rustflags = [
-    "-C", "link-arg=-T../arch/riscv64/boot/linker.ld",
+    "-C", "link-arg=-Tarch/riscv64/boot/linker.ld",
 ]
